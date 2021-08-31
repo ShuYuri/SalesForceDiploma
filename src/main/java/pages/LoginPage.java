@@ -41,13 +41,14 @@ public class LoginPage extends BasePage {
         new HomePage(driver);
     }
 
-    public LoginPage waitForHomePageLoaded() {
-        waitForPageOpened(iconImage, 60);
+    public LoginPage waitForHomePageLoaded() throws InterruptedException {
+        Thread.sleep(2000);
+        waitForPageOpened(iconImage, 30);
         return this;
     }
 
     public LoginPage waitForErrorTextMessage() {
-        waitForPageOpened(errorText, 60);
+        waitForPageOpened(errorText, 30);
         return this;
     }
 

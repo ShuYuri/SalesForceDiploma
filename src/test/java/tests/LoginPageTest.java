@@ -9,7 +9,7 @@ public class LoginPageTest extends BaseTest {
 
     @Test(description = "Registration / logging in Sales Force")
     @Description("Enter username / password -> press enter")
-    public void loginPageTest() {
+    public void loginPageTest() throws InterruptedException {
         loginPage
                 .loginPage()
                 .login(
@@ -21,7 +21,7 @@ public class LoginPageTest extends BaseTest {
     }
 
     @Test
-    public void loginPageTestCheckLogoNameTest() {
+    public void loginPageTestCheckLogoNameTest() throws InterruptedException {
         loginPage
                 .loginPage()
                 .login(

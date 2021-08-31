@@ -74,7 +74,7 @@ public class NewTaskModalPage extends BasePage {
     }
 
     public NewTaskModalPage waitForTaskModalPageLoaded() {
-        waitForPageOpened(taskAdditionalInformation, 60);
+        waitForPageOpened(taskAdditionalInformation, 30);
         return this;
     }
 

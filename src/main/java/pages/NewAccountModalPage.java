@@ -89,7 +89,7 @@ public class NewAccountModalPage extends BasePage {
     }
 
     public NewAccountModalPage waitForPageLoaded() {
-        waitForPageOpened(additionalInformation, 60);
+        waitForPageOpened(additionalInformation, 30);
         return this;
     }
 

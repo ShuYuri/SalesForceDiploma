@@ -85,7 +85,7 @@ public class NewOpportunityModalPage extends BasePage {
     }
 
     public NewOpportunityModalPage waitForOpportunityModalPageLoaded() {
-        waitForPageOpened(taskAdditionalInformation, 60);
+        waitForPageOpened(taskAdditionalInformation, 30);
         return this;
     }
 
