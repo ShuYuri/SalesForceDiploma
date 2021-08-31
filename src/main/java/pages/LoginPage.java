@@ -19,7 +19,8 @@ public class LoginPage extends BasePage {
     private static final By LOGO_ICON = By.xpath("//*[contains(@class, 'photoContainer')]");
     private static final By LOGO_NAME = By.xpath("//*[@class = 'profile-card-name']/descendant::a[contains(@class,'profile-link-label')]");
 
-    @FindBy(xpath = "//*[contains(@class, 'photoContainer')]")
+    @FindBy(xpath = "//*[contains(@class, 'userProfileCardTriggerRoot')]")
+//    @FindBy(xpath = "//*[contains(@class, 'photoContainer')]")
     WebElement iconImage;
 
     @FindBy(xpath = "//*[contains(@class, 'density')][contains(text(),'Display Density')]")
