@@ -9,7 +9,7 @@ public class NewAccountModalPageTest extends BaseTest {
 
     @Test
     @Description("FILL IN THE ACCOUNT INFORMATION")
-    public void newAccountModalPageTest() {
+    public void newAccountModalPageTest() throws InterruptedException{
         loginPage
                 .loginPage()
                 .login(

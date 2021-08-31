@@ -73,7 +73,7 @@ public class NewTaskModalPage extends BasePage {
         return this;
     }
 
-    public NewTaskModalPage waitForTaskModalPageLoaded() {
+    public NewTaskModalPage waitForTaskModalPageLoaded() throws InterruptedException{
         waitForPageOpened(taskAdditionalInformation, 30);
         return this;
     }

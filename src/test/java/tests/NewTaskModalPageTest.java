@@ -9,7 +9,7 @@ public class NewTaskModalPageTest extends BaseTest {
 
     @Test
     @Description("Create task WITHOUT Reminder Set - Date & Time")
-    public void newTaskModalPageTest () {
+    public void newTaskModalPageTest() throws InterruptedException {
         loginPage
                 .loginPage()
                 .login(
@@ -20,12 +20,12 @@ public class NewTaskModalPageTest extends BaseTest {
                 .waitForTaskModalPageLoaded()
                 .createInformationIntoTaskNewPage("Send Letter", "Privet trabla", "9/22/2021")
                 .clickSaveNewTaskButton();
-        Assert.assertEquals(newTaskModalPage.getTaskSubject ("Send"), "Send Letter");
+        Assert.assertEquals(newTaskModalPage.getTaskSubject("Send"), "Send Letter");
     }
 
     @Test
     @Description("Create task WITH Reminder Set - Date & Time")
-    public void newTaskModalPageTestReminderSet () {
+    public void newTaskModalPageTestReminderSet() throws InterruptedException {
         loginPage
                 .loginPage()
                 .login(
@@ -37,7 +37,7 @@ public class NewTaskModalPageTest extends BaseTest {
                 .createNewTaskWithDateAndTime("Send Letter", "Privet trabla", "9/25/2021",
                         "8/31/2021", "1230", "In Progress", "Low")
                 .clickSaveNewTaskButton();
-        Assert.assertEquals(newTaskModalPage.getTaskSubject ("Send"), "Send Letter");
+        Assert.assertEquals(newTaskModalPage.getTaskSubject("Send"), "Send Letter");
         Assert.assertEquals(newTaskModalPage.getTaskDueDate("2021"), "9/25/2021");
         Assert.assertEquals(newTaskModalPage.getTaskReminderSet("Aug"), "Aug 31, 2021 at 12:30 pm");
     }

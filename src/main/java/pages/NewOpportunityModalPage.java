@@ -84,7 +84,7 @@ public class NewOpportunityModalPage extends BasePage {
         return this;
     }
 
-    public NewOpportunityModalPage waitForOpportunityModalPageLoaded() {
+    public NewOpportunityModalPage waitForOpportunityModalPageLoaded() throws InterruptedException{
         waitForPageOpened(taskAdditionalInformation, 30);
         return this;
     }

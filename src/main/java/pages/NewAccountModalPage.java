@@ -88,7 +88,7 @@ public class NewAccountModalPage extends BasePage {
         return this;
     }
 
-    public NewAccountModalPage waitForPageLoaded() {
+    public NewAccountModalPage waitForPageLoaded() throws InterruptedException{
         waitForPageOpened(additionalInformation, 30);
         return this;
     }

@@ -41,7 +41,7 @@ public class EmailModalPage extends BasePage {
         return this;
     }
 
-    public EmailModalPage waitForHomePageLoaded() {
+    public EmailModalPage waitForHomePageLoaded() throws InterruptedException{
         waitForPageOpened(iconImage, 30);
         return this;
     }

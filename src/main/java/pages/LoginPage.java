@@ -51,12 +51,12 @@ public class LoginPage extends BasePage {
     }
 
     public LoginPage waitForLogoModalPageLoaded() throws InterruptedException {
-        Thread.sleep(2000);
+//        Thread.sleep(2000);
         waitForPageOpened(iconLogoModalPage, 30);
         return this;
     }
 
-    public LoginPage waitForErrorTextMessage() {
+    public LoginPage waitForErrorTextMessage() throws InterruptedException{
         waitForPageOpened(errorText, 30);
         return this;
     }

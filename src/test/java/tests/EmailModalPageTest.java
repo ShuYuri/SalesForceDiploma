@@ -9,7 +9,7 @@ public class EmailModalPageTest extends BaseTest {
 
     @Test
     @Description("Trying to send a letter without a recipient")
-    public void newEmailModalPageWithoutRecipientTest() {
+    public void newEmailModalPageWithoutRecipientTest() throws InterruptedException{
         loginPage
                 .loginPage()
                 .login(
@@ -25,7 +25,7 @@ public class EmailModalPageTest extends BaseTest {
 
     @Test
     @Description("Trying to send a letter without a subject")
-    public void newEmailModalPageWithoutSubjectTest() {
+    public void newEmailModalPageWithoutSubjectTest() throws InterruptedException{
         loginPage
                 .loginPage()
                 .login(

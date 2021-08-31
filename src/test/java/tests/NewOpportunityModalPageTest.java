@@ -10,7 +10,7 @@ public class NewOpportunityModalPageTest extends BaseTest {
     @Test
     @Description("Submit incomplete information about the opportunity." +
             "Post information about opportunities")
-    public void newIncompleteOpportunityModalPageTest () {
+    public void newIncompleteOpportunityModalPageTest() throws InterruptedException {
         loginPage
                 .loginPage()
                 .login(
@@ -20,14 +20,14 @@ public class NewOpportunityModalPageTest extends BaseTest {
                 .openNewOpportunityModalPage()
                 .waitForOpportunityModalPageLoaded()
                 .createNewIncompleteOpportunity("9/21/2021", "Как успеть запрыгнуть в последний вагон",
-                        "20","15200", "Давайте жить дружно! - Let live in peace!")
+                        "20", "15200", "Давайте жить дружно! - Let live in peace!")
                 .saveOpportunity();
         Assert.assertEquals(newOpportunityModalPage.getErrorMassage(), "We hit a snag.");
     }
 
     @Test
     @Description("Post information about opportunities")
-    public void newCompleteOpportunityModalPageTest () {
+    public void newCompleteOpportunityModalPageTest() throws InterruptedException {
         loginPage
                 .loginPage()
                 .login(
