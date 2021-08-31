@@ -28,8 +28,9 @@ public class LoginPageTest extends BaseTest {
                         System.getenv().getOrDefault("username", PropertyReader.getProperty("username")),
                         System.getenv().getOrDefault("password", PropertyReader.getProperty("password")));
         loginPage
-                .waitForHomePageLoaded()
-                .clickLogoName();
+                .clickLogoName()
+                .waitForLogoModalPageLoaded();
+                //.clickLogoName();
         Assert.assertEquals(loginPage.getLogoName(), System.getenv().getOrDefault("accountName", PropertyReader.getProperty("accountName")));
     }
 
