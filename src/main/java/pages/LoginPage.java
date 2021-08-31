@@ -42,12 +42,12 @@ public class LoginPage extends BasePage {
     }
 
     public LoginPage waitForHomePageLoaded() {
-        waitForPageOpened(iconImage, 50);
+        waitForPageOpened(iconImage, 60);
         return this;
     }
 
     public LoginPage waitForErrorTextMessage() {
-        waitForPageOpened(errorText, 50);
+        waitForPageOpened(errorText, 60);
         return this;
     }
 

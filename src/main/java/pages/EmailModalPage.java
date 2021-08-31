@@ -42,7 +42,7 @@ public class EmailModalPage extends BasePage {
     }
 
     public EmailModalPage waitForHomePageLoaded() {
-        waitForPageOpened(iconImage, 20);
+        waitForPageOpened(iconImage, 60);
         return this;
     }
 
