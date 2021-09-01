@@ -19,8 +19,8 @@ public class LoginPage extends BasePage {
     private static final By LOGO_ICON = By.xpath("//*[contains(@class, 'photoContainer')]");
     private static final By LOGO_NAME = By.xpath("//*[@class = 'profile-card-name']/descendant::a[contains(@class,'profile-link-label')]");
 
-    @FindBy(xpath = "//*[contains(@class, 'userProfileCardTriggerRoot')]")
-//    @FindBy(xpath = "//*[contains(@class, 'photoContainer')]")
+//    @FindBy(xpath = "//*[contains(@class, 'userProfileCardTriggerRoot')]")
+    @FindBy(xpath = "//*[contains(@class, 'photoContainer')]")
     WebElement iconImage;
 
     @FindBy(xpath = "//*[contains(@class, 'density')][contains(text(),'Display Density')]")
@@ -52,12 +52,13 @@ public class LoginPage extends BasePage {
     }
 
     public LoginPage waitForLogoModalPageLoaded() throws InterruptedException {
-//        Thread.sleep(2000);
+        Thread.sleep(2000);
         waitForPageOpened(iconLogoModalPage, 30);
         return this;
     }
 
     public LoginPage waitForErrorTextMessage() throws InterruptedException{
+        Thread.sleep(2000);
         waitForPageOpened(errorText, 30);
         return this;
     }
@@ -70,7 +71,8 @@ public class LoginPage extends BasePage {
         return driver.getTitle();
     }
 
-    public LoginPage clickLogoName() {
+    public LoginPage clickLogoName() throws InterruptedException{
+        Thread.sleep(2000);
         driver.findElement(LOGO_ICON).click();
         return this;
     }
