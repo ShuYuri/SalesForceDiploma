@@ -56,8 +56,7 @@ public class LoginPage extends BasePage {
         return this;
     }
 
-    public LoginPage waitForErrorTextMessage() throws InterruptedException{
-        Thread.sleep(2000);
+    public LoginPage waitForErrorTextMessage() throws InterruptedException {
         waitForPageOpened(errorText, 30);
         return this;
     }
@@ -70,13 +69,12 @@ public class LoginPage extends BasePage {
         return driver.getTitle();
     }
 
-    public LoginPage clickLogoName() throws InterruptedException{
-        Thread.sleep(2000);
+    public LoginPage clickLogoName() {
         driver.findElement(LOGO_ICON).click();
         return this;
     }
 
-    public String getLogoName() throws InterruptedException{
+    public String getLogoName() throws InterruptedException {
         Thread.sleep(2000);
         return driver.findElement(LOGO_NAME).getText();
     }
