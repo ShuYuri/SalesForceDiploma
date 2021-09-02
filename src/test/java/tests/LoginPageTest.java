@@ -29,15 +29,13 @@ public class LoginPageTest extends BaseTest {
                         System.getenv().getOrDefault("password", PropertyReader.getProperty("password")));
         loginPage
                 .waitForHomePageLoaded()
-                .clickLogoName()
-                .waitForLogoModalPageLoaded();
-                //.clickLogoName();
+                .clickLogoName();
         Assert.assertEquals(loginPage.getLogoName(), System.getenv().getOrDefault("accountName", PropertyReader.getProperty("accountName")));
     }
 
     @Test(description = "Registration / logging in Sales Force")
     @Description("Enter username / wrong password -> press enter")
-    public void loginPageTestWithWrongPasswordTest() throws InterruptedException{
+    public void loginPageTestWithWrongPasswordTest() throws InterruptedException {
         loginPage
                 .loginPage()
                 .login(

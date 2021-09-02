@@ -19,9 +19,8 @@ public class BasePage implements IConstants {
         driver.get(url);
     }
 
-    public void waitForPageOpened(WebElement element, int timeout) throws InterruptedException {
+    public void waitForPageOpened(WebElement element, int timeout) {
         WebDriverWait wait = new WebDriverWait(driver, timeout);
-        Thread.sleep(2000);
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 }

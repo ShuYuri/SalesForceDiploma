@@ -22,8 +22,8 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = "//*[contains(@class, 'photoContainer')]")
     WebElement iconImage;
 
-    @FindBy(xpath = "//*[contains(@class, 'density')][contains(text(),'Display Density')]")
-    WebElement iconLogoModalPage;
+//    @FindBy(xpath = "//*[contains(@class, 'density')][contains(text(),'Display Density')]")
+//    WebElement iconLogoModalPage;
 
     @FindBy(id = "error")
     WebElement errorText;
@@ -44,19 +44,18 @@ public class LoginPage extends BasePage {
         new HomePage(driver);
     }
 
-    public LoginPage waitForHomePageLoaded() throws InterruptedException {
-        Thread.sleep(2000);
+    public LoginPage waitForHomePageLoaded() {
         waitForPageOpened(iconImage, 30);
         return this;
     }
 
-    public LoginPage waitForLogoModalPageLoaded() throws InterruptedException {
-        Thread.sleep(2000);
-        waitForPageOpened(iconLogoModalPage, 30);
-        return this;
-    }
+//    public LoginPage waitForLogoModalPageLoaded() throws InterruptedException {
+//        Thread.sleep(2000);
+//        waitForPageOpened(iconLogoModalPage, 30);
+//        return this;
+//    }
 
-    public LoginPage waitForErrorTextMessage() throws InterruptedException {
+    public LoginPage waitForErrorTextMessage() {
         waitForPageOpened(errorText, 30);
         return this;
     }
