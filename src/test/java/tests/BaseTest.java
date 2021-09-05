@@ -28,7 +28,7 @@ public class BaseTest {
     DeleteAccountModalPage newDeleteAccountModalPage;
     NewOpportunityModalPage newOpportunityModalPage;
     EmailModalPage newEmailModalPage;
-    private ChromeOptions chromeOptions;
+    ChromeOptions chromeOptions;
 
     @BeforeMethod
     @Step("Open browser,maximize window")
