@@ -1,7 +1,6 @@
 package pages;
 
 import constants.IConstants;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -22,7 +21,6 @@ public class BasePage implements IConstants {
 
     public void waitForPageOpened(WebElement element, int timeout) {
         WebDriverWait wait = new WebDriverWait(driver, timeout);
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(String.valueOf(element))));
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 }
