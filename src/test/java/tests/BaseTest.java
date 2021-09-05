@@ -52,7 +52,7 @@ public class BaseTest {
         System.setProperty("webdriver.chrome.driver",
                 "browser-drivers/chromedriver");context.setAttribute(variable, driver);
         chromeOptions.addArguments("--no-sandbox");
-        chromeOptions.addArguments("--allow-running-insecure-content");
+        //chromeOptions.addArguments("--allow-running-insecure-content");
         //chromeOptions.addArguments("window-size=1920x1080");
         chromeOptions.addArguments("--disable-gpu");
         chromeOptions.addArguments("--disable-extensions");
