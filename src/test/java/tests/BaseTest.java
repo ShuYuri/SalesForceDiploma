@@ -6,6 +6,7 @@ import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterMethod;
@@ -65,6 +66,9 @@ public class BaseTest {
         capabilities.setCapability("trustAllSSLCertificates", true);
         chromeOptions.addArguments("--disable-features=VizDisplayCompositor");
         capabilities.setCapability("acceptSslCerts", true);
+        capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+        chromeOptions.addArguments("--ignore-certificate-errors");
+        chromeOptions.addArguments("--disable-features=VizDisplayCompositor");
         capabilities.setCapability("acceptInsecureCerts", true);
     }
 
