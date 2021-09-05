@@ -6,6 +6,7 @@ import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -48,6 +49,13 @@ public class BaseTest {
         String variable = "driver";
         log.debug("Setting driver into context with variable name " + variable);
         context.setAttribute(variable, driver);
+        final ChromeOptions chromeOptions = new ChromeOptions();
+        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+        capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+        capabilities.setCapability("trustAllSSLCertificates", true);
+        chromeOptions.addArguments("--disable-features=VizDisplayCompositor");
+        capabilities.setCapability("acceptSslCerts", true);
+        capabilities.setCapability("acceptInsecureCerts", true);
     }
 
     @AfterMethod

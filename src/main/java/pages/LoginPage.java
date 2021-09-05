@@ -73,8 +73,7 @@ public class LoginPage extends BasePage {
         return this;
     }
 
-    public String getLogoName() throws InterruptedException {
-        Thread.sleep(2000);
+    public String getLogoName() {
         return driver.findElement(LOGO_NAME).getText();
     }
 }

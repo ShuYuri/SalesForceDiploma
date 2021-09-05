@@ -22,7 +22,7 @@ public class BasePage implements IConstants {
 
     public void waitForPageOpened(WebElement element, int timeout) {
         WebDriverWait wait = new WebDriverWait(driver, timeout);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(String.valueOf(element))));
-        //wait.until(ExpectedConditions.visibilityOf(element));
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(String.valueOf(element))));
+        wait.until(ExpectedConditions.visibilityOf(element));
     }
 }

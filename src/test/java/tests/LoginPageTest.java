@@ -21,7 +21,7 @@ public class LoginPageTest extends BaseTest {
     }
 
     @Test
-    public void loginPageTestCheckLogoNameTest() throws InterruptedException {
+    public void loginPageTestCheckLogoNameTest() {
         loginPage
                 .loginPage()
                 .login(
@@ -35,7 +35,7 @@ public class LoginPageTest extends BaseTest {
 
     @Test(description = "Registration / logging in Sales Force")
     @Description("Enter username / wrong password -> press enter")
-    public void loginPageTestWithWrongPasswordTest() throws InterruptedException {
+    public void loginPageTestWithWrongPasswordTest() {
         loginPage
                 .loginPage()
                 .login(
