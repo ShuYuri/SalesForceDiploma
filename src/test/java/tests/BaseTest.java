@@ -49,8 +49,8 @@ public class BaseTest {
         newEmailModalPage = new EmailModalPage(driver);
         String variable = "driver";
         log.debug("Setting driver into context with variable name " + variable);
-//        System.setProperty("webdriver.chrome.driver",
-//                "browser-drivers/chromedriver");context.setAttribute(variable, driver);
+        System.setProperty("webdriver.chrome.driver",
+                "browser-drivers/chromedriver");context.setAttribute(variable, driver);
         chromeOptions.addArguments("--no-sandbox");
         chromeOptions.addArguments("--allow-running-insecure-content");
         //chromeOptions.addArguments("window-size=1920x1080");
@@ -58,7 +58,7 @@ public class BaseTest {
         chromeOptions.addArguments("--disable-extensions");
         chromeOptions.setExperimentalOption("useAutomationExtension", false);
         //chromeOptions.addArguments("--proxy-server='direct://'");
-        chromeOptions.addArguments("--proxy-bypass-list=*");
+        //chromeOptions.addArguments("--proxy-bypass-list=*");
         final ChromeOptions chromeOptions = new ChromeOptions();
         DesiredCapabilities capabilities = DesiredCapabilities.chrome();
         capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
