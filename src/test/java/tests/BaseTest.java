@@ -49,8 +49,8 @@ public class BaseTest {
         newEmailModalPage = new EmailModalPage(driver);
         String variable = "driver";
         log.debug("Setting driver into context with variable name " + variable);
-        System.setProperty("webdriver.chrome.driver",
-                "browser-drivers/chromedriver");context.setAttribute(variable, driver);
+//        System.setProperty("webdriver.chrome.driver",
+//                "browser-drivers/chromedriver");context.setAttribute(variable, driver);
         chromeOptions.addArguments("--no-sandbox");
         //chromeOptions.addArguments("--allow-running-insecure-content");
         //chromeOptions.addArguments("window-size=1920x1080");
