@@ -56,7 +56,7 @@ public class BaseTest {
         //chromeOptions.addArguments("window-size=1920x1080");
         chromeOptions.addArguments("--disable-gpu");
         chromeOptions.addArguments("--disable-extensions");
-        chromeOptions.setExperimentalOption("useAutomationExtension", false);
+        //chromeOptions.setExperimentalOption("useAutomationExtension", false);
         //chromeOptions.addArguments("--proxy-server='direct://'");
         //chromeOptions.addArguments("--proxy-bypass-list=*");
         final ChromeOptions chromeOptions = new ChromeOptions();
