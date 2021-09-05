@@ -22,9 +22,6 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = "//*[contains(@class, 'photoContainer')]")
     WebElement iconImage;
 
-//    @FindBy(xpath = "//*[contains(@class, 'density')][contains(text(),'Display Density')]")
-//    WebElement iconLogoModalPage;
-
     @FindBy(id = "error")
     WebElement errorText;
 
@@ -48,12 +45,6 @@ public class LoginPage extends BasePage {
         waitForPageOpened(iconImage, 30);
         return this;
     }
-
-//    public LoginPage waitForLogoModalPageLoaded() throws InterruptedException {
-//        Thread.sleep(2000);
-//        waitForPageOpened(iconLogoModalPage, 30);
-//        return this;
-//    }
 
     public LoginPage waitForErrorTextMessage() {
         waitForPageOpened(errorText, 30);
