@@ -26,6 +26,7 @@ public class LoginPageTest extends BaseTest {
         Assert.assertEquals(loginPage.getTitle(), "Home | Salesforce");
     }
 
+
     @Test
     public void loginPageTestCheckLogoNameTest() {
         loginPage
