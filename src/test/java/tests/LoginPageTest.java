@@ -13,7 +13,6 @@ import java.net.URL;
 
 public class LoginPageTest extends BaseTest {
 
-
     @Test(description = "Registration / logging in Sales Force")
     @Description("Enter username / password -> press enter")
     public void loginPageTest() {
