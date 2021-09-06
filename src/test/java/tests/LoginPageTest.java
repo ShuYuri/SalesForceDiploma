@@ -63,6 +63,7 @@ public class LoginPageTest extends BaseTest {
         }
         BufferedReader in = null;
         try {
+            assert whatismyip != null;
             in = new BufferedReader(new InputStreamReader(
                     whatismyip.openStream()));
         } catch (IOException e) {
@@ -71,6 +72,7 @@ public class LoginPageTest extends BaseTest {
 
         String ip = null; //you get the IP as a String
         try {
+            assert in != null;
             ip = in.readLine();
         } catch (IOException e) {
             e.printStackTrace();
