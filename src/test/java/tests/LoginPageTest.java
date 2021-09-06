@@ -5,6 +5,12 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import utils.PropertyReader;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
+
 public class LoginPageTest extends BaseTest {
 
     @Test(description = "Registration / logging in Sales Force")
@@ -44,5 +50,31 @@ public class LoginPageTest extends BaseTest {
         loginPage
                 .waitForErrorTextMessage();
         Assert.assertEquals(loginPage.getErrorText(), "Please check your username and password. If you still can't log in, contact your Salesforce administrator.");
+    }
+
+    @Test
+    public void getMyIpAddressTest() {
+
+        URL whatismyip = null;
+        try {
+            whatismyip = new URL("http://checkip.amazonaws.com");
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        BufferedReader in = null;
+        try {
+            in = new BufferedReader(new InputStreamReader(
+                    whatismyip.openStream()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        String ip = null; //you get the IP as a String
+        try {
+            ip = in.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println(ip);
     }
 }
