@@ -70,7 +70,7 @@ public class LoginPageTest extends BaseTest {
             e.printStackTrace();
         }
 
-        String ip = null; //you get the IP as a String - 34.228.236.14
+        String ip = null; //you get the IP as a String
         try {
             assert in != null;
             ip = in.readLine();
