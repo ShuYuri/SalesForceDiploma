@@ -23,8 +23,8 @@ jobs:
           command: google-chrome --version
       - run:
           name: Running tests
-          command: mvn -Dtest=LoginPageTest#getMyIpAddressTest test
-#          command: mvn -Dtest=LoginPageTest#loginPageTestCheckLogoNameTest test
+#          command: mvn -Dtest=LoginPageTest#getMyIpAddressTest test
+          command: mvn -Dtest=LoginPageTest#loginPageTestCheckLogoNameTest test
 #          command: mvn clean test
       - run:
           name: Generate allure report
